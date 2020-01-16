@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MUPDefinition xsi:schemaLocation="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd mupdefinition.xsd" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<packageinformation>
+		<name>Cypress Trackpad</name>
+		<version>2.5.1.72</version>
+		<installertype>custom</installertype>
+		<packagegrouping>single_package</packagegrouping>
+		<packagingtype>executable</packagingtype>
+		<releasetype>DRVR</releasetype>
+		<mupspecificationversion>2.4.3</mupspecificationversion>
+		<supportedoperatingsystems>
+				<osidentifier name="Windows10" architecture="x86"></osidentifier>
+				<osidentifier name="Windows10" architecture="x64"></osidentifier>
+		</supportedoperatingsystems>
+		<content>
+			<Device componentID="16047">
+			<Generic>ACPI\VEN_PNP&amp;DEV_0F13</Generic>
+			<Generic>ACPI\VEN_DLL&amp;DEV_052E</Generic>
+			<Generic>ACPI\VEN_DLL&amp;DEV_0589</Generic>
+			<Generic>ACPI\VEN_DLL&amp;DEV_058B</Generic>
+			<Image type="DRVR" version="2.5.1.72">
+			  <file>cymfltr.sys</file>
+			  <file>cymfltr.inf</file>
+			  <file>cymfltr.cat</file>
+			</Image>
+			</Device>
+		</content>
+	</packageinformation>
+
+	<executable>
+		<executablename>Setup.exe</executablename>
+		<requiredparameters>
+			<commandlineparameter></commandlineparameter>
+		</requiredparameters>
+
+	</executable>
+
+	<behaviors>
+		<behavior name="attended">
+		</behavior>
+
+		<behavior name="unattended">
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">exenoui</optionvalue>
+			</vendoroption>
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">qn</optionvalue>
+			</vendoroption>
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">norestart</optionvalue>
+			</vendoroption>
+		</behavior>
+
+		<behavior name="extractdrivers">
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">exenoui</optionvalue>
+			</vendoroption>
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">qn</optionvalue>
+			</vendoroption>
+
+			<vendoroption>
+				<optionvalue switch=" " requiresvalue="true" valuedelimiter="=">EXTRACTDRIVERS</optionvalue>
+			</vendoroption>
+		</behavior>
+
+		<behavior name="freshinstall">
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">exenoui</optionvalue>
+			</vendoroption>
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">qn</optionvalue>
+			</vendoroption>
+			<vendoroption>
+				<optionvalue requiresvalue="false" switch="/">norestart</optionvalue>
+			</vendoroption>
+
+			<vendoroption>
+				<optionvalue switch=" " requiresvalue="false">FRESHINSTALL=TRUE</optionvalue>
+			</vendoroption>
+		</behavior>
+	</behaviors>
+
+	<parameters>
+		<parametermapping name="logfile">
+			<vendoroption>
+					<optionvalue switch="/" requiresvalue="true" valuedelimiter=" ">l*</optionvalue>
+			</vendoroption>
+		</parametermapping>
+	</parameters>
+
+	<returncodes>
+		<returncodemapping name="SUCCESS">
+			<vendorreturncode>1</vendorreturncode>
+		</returncodemapping>
+
+		<returncodemapping name="ERROR">
+			<vendorreturncode>1603</vendorreturncode>
+		</returncodemapping>
+
+		<returncodemapping name="REBOOT_REQUIRED">
+			<vendorreturncode>0</vendorreturncode>
+		</returncodemapping>
+
+		<returncodemapping name="ERROR_INSTALL_PLATFORM_UNSUPPORTED">
+			<vendorreturncode>1633</vendorreturncode>
+		</returncodemapping>
+
+		<returncodemapping name="UNKNOWN_OPTION">
+			<vendorreturncode>1608</vendorreturncode>
+		</returncodemapping>
+
+		<returncodemapping name="SUCCESS">
+			<vendorreturncode>3010</vendorreturncode>
+		</returncodemapping>
+	</returncodes>
+
+ 	<inventorymetadata>
+    		<fullpackageidentifier>
+      			<msis>
+        			<msi componentID="16047"></msi>
+      			</msis>
+    		</fullpackageidentifier>
+  	</inventorymetadata>
+</MUPDefinition>
+

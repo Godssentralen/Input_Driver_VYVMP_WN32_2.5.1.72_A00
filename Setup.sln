@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Setup", "Setup.exe", "{A0A300CB-9AA7-41DA-9027-3CB3A9426FFA}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\ProgramData\Microsoft\Windows\Containers\BaseImages\b276264d-2084-45ee-bf3d-759bb6f667b6\Files\Users\All Users\Dell\drivers\Input_Driver_VYVMP_WN32_2.5.1.72_A00\Setup.exe
+		RemoteMachine = ORACLE
+		StartingDirectory = C:\ProgramData\Microsoft\Windows\Containers\BaseImages\b276264d-2084-45ee-bf3d-759bb6f667b6\Files\Users\All Users\Dell\drivers\Input_Driver_VYVMP_WN32_2.5.1.72_A00
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A300CB-9AA7-41DA-9027-3CB3A9426FFA}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91AFD109-83FE-40D5-80A3-90617804AB14}
+	EndGlobalSection
+EndGlobal
